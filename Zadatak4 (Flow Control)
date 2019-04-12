@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int cijena, kolicina, trosak;
+	float sPopustom, popust;
+	
+
+	cout << "Ovaj program racuna ukupni trosak" << endl;
+	cout << "-------------------------------------------------------" << endl;
+
+	cout << "Unesite cijenu proizvoda: ";
+	cin >> cijena;
+	cout << "Unesite kolicinu proizvoda koju zelite: ";
+	cin >> kolicina;
+
+	trosak = cijena * kolicina;
+	if (trosak > 2000) {
+		popust = trosak * 0.10;
+		sPopustom = trosak - popust;
+		cout << "Vas trosak je: " << trosak << " kn" << " no posto je veci od 2000 " << "kn " << "dani vam je popust od 10%" << endl;
+		cout << "Zavrsna cijena vam je " << sPopustom << " kn." << endl;
+	}
+	else {
+		cout << "Vas trosak je: " << trosak << " kn." << endl;
+	}
+	system("pause");
+}
