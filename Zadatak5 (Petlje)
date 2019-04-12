@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int marko, ivica, petra;
+
+	cout << "Koliko godina ima Marko?";
+	cin >> marko;
+	cout << "Koliko godina ima Ivica?";
+	cin >> ivica;
+	cout << "Koliko godina ima Petra?";
+	cin >> petra;
+
+	if (marko > ivica && petra > ivica)
+		cout << "Ivica je najmladi" << endl;
+	if (marko > petra && ivica > petra)
+		cout << "Petra je najmlada" << endl;
+	if (petra > marko && ivica > marko)
+		cout << "Marko je najmladi" << endl;
+
+	system("pause");
+}
