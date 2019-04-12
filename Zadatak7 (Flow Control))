@@ -1,0 +1,31 @@
+7.	Zadatak 
+Korisnik unosi slovni znak. Potrebno je odrediti da li je uneseno veliko slovo, malo slovo, brojka ili specijalni simbol. Za rješenje zadatka koristite ASCII tablicu.
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	char nekaj, ascii;
+	cout << "Unesi neki znak: ";
+	cin >> nekaj;
+
+	ascii = (int)nekaj;
+
+	if (ascii >= 33 && ascii <= 47) {
+		cout << "Uneseni je simbol" << endl;
+	}
+	else if (ascii >= 48 && ascii <= 57) {
+		cout << "Uneseni je broj" << endl;
+	}
+	else if (ascii >= 65 && ascii <= 90) {
+		cout << "Uneseno je veliko slovo" << endl;
+	}
+	else if (ascii >= 97 && ascii <= 122) {
+		cout << "Uneseno je malo slovo" << endl;
+	}
+	else {
+
+	}
+	system("pause");
+}
