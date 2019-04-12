@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	float hrvatski, matematika, likovni, engleski, tjelesni, ukupno;
+	float izvrstan, vrloDobar, dobar, neZadovoljava;
+
+	cout << "Upisi ocjenu iz hrvatskog: ";
+	cin >> hrvatski;
+	cout << "Upisi ocjenu iz matematike: ";
+	cin >> matematika;
+	cout << "Upisi ocjenu iz likovnog: ";
+	cin >> likovni;
+	cout << "Upisi ocjenu iz engleskog: ";
+	cin >> engleski;
+	cout << "Upisi ocjenu iz tjelesnog: ";
+	cin >> tjelesni;
+
+	ukupno = (hrvatski + matematika + likovni + engleski + tjelesni);
+	izvrstan = 25 * 0.60;
+	vrloDobar = 25 * 0.50;
+	dobar = 25 * 0.40;
+
+
+	if (ukupno >= izvrstan) {
+		cout << "Zavrsna ocjena: Izvrstan" << endl;
+	}
+
+	else if (ukupno >= vrloDobar) {
+		cout << "Zavrsna ocjena: Vrlo dobar" << endl;
+	}
+
+	else if (ukupno >= dobar) {
+		cout << "Zavrsna ocjena: Dobar" << endl;
+	}
+	else (cout << "Ne zadovoljava") << endl;
+
+	system("pause");
+}
