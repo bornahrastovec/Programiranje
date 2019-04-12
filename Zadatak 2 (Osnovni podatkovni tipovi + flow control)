@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int bin, dec;
+
+	cout << "Unesi cetveroznamenkasti binarni broj: ";
+	cin >> bin;
+	
+	if (bin / 10000 > 0) {
+		cout << "Broj ima vise od cetiri znamenke";
+	}
+	else if (bin % 10 > 1 || (bin / 10) % 10 > 1 || (bin / 100) % 10 > 1 || (bin / 1000) % 10 > 1) {
+		cout << "Koristite samo nule i jedinice";
+	}
+	else {
+		int dec = 0;
+		((bin / 1000) % 10 == 1) ? dec += 8 : dec += 0;
+		((bin / 100) % 10 == 1) ? dec += 4 : dec += 0;
+		((bin / 10) % 10 == 1) ? dec += 2 : dec += 0;
+		(bin % 10 == 1) ? dec += 1 : dec += 0;
+		cout << "Decimalni zapis binarnog broja " << bin << " je " << dec << endl;
+	}
+	system("pause");
+
+}
