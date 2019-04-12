@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int broj;
+
+	cout << "Ovaj program racuna apsolutnu vrijednost unesenog broja" << endl;
+	cout << "-------------------------------------------------------" << endl;
+
+	cout << "Unesi broj: ";
+	cin >> broj;
+
+	if (broj < 0) {
+		cout << "Apsolutna vrijednost broja je: " << -(broj) << endl;
+	}
+	else {
+		cout << "Apsolutna vrijednost broja je: " << broj << endl;
+	}
+	system("pause");
+}
