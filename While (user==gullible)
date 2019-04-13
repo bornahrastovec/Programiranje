@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int num, num2;
+
+	do {
+		cout << "Unesi broj a da nije 5: ";
+		cin >> num;
+		if (num == 5) {
+			cout << "Nisi trebao unijeti broj 5" << endl;
+		}
+		else {
+			for (int i = 0; i <= 10; i++) {
+				cout << "Unesi broj a da nije " << i << ": "; 
+				cin >> num2;
+				if (num2 == i) {
+					cout << "Nisi trebao unijeti broj " << i;
+					break;
+				}
+				else if (num2 == 5) {
+					cout << "Rekao sam ti da nesmijes unijeti 5" << endl;
+					break;
+				}
+				if (i >=10) {
+					cout << "Imas vise strpljenja nego ja, svaka cast!" << endl;
+					break;
+				}
+			}
+			break;
+		}
+	} while (num != 5);
+	system("pause");
+}
