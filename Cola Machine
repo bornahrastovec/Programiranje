@@ -1,0 +1,66 @@
+// Switch statements
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int input;
+
+	cout << "(1) Pelin (2) Jeger (3) Viski (4) Borovnicka (5) Konjak" << endl;
+	cout << "Izaberi svoje najdraze pice: ";
+	cin >> input;
+
+	switch (input) {
+	case (1):
+		cout << "Izabro si pelin" << endl;
+		break;
+	case (2):
+		cout << "Izabro si Jeger" << endl; 
+		break;
+	case (3):
+		cout << "Izabro si viski" << endl;
+		break;
+	case (4):
+		cout << "Izabro si borovnicku" << endl;
+		break;
+	case (5):
+		cout << "Izabro si konjak" << endl;
+		break;
+	default: 
+		cout << "De se streli" << endl;
+	}
+	system("pause");
+}
+
+// If statements
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int input;
+
+	cout << "(1) Pelin (2) Jeger (3) Viski (4) Borovnicka (5) Konjak" << endl;
+	cout << "Izaberi svoje najdraze pice: ";
+	cin >> input;
+
+	if (input == 1){
+		cout << "Izabrao si pelin";
+	}
+	else if (input==2){
+		cout << "Izabrao si jeger";
+	}
+	else if (input==3){
+		cout << "Izabrao si viski";
+	}
+	else if (input==4){
+		cout << "Izabrao si borovnicku";
+	}
+	else if (input==5){
+		cout << "Izabrao si konjak";
+	}
+	else {
+		cout << "Krivi izbor, eto ti pare nazad amigo";
+	}
+	system("pause");
+}
