@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	string name;
+	string surname;
+	string fullname;
+	string reverse = "";
+
+	cout << "Please input a name: ";
+	getline(cin, name);
+	cout << "Please input a surname: ";
+	getline(cin, surname);
+	
+	fullname = name + surname;
+	cout << fullname << endl;
+	
+	for (int i = 0; i < name.length(); i++) {
+		if (name[i] == 'a' || name[i] == 'A' || name[i] == 'e' || name[i]== 'E' || name[i] == 'o' || name[i] == 'O' || name[i] == 'u' || name[i] == 'U') {
+			name[i] = 'z';
+		}
+	}
+
+	for (int i = 0; i < surname.length(); i++) {
+		if (surname	[i] == 'a' || surname[i] == 'A' || surname[i] == 'e' || surname[i] == 'E' || surname[i] == 'o' || surname[i] == 'O' || surname[i] == 'u' || surname[i] == 'U') {
+			surname[i] = 'z';
+		}
+	}
+	cout << name + surname << endl;
+	for (int i = fullname.length() - 1; i >= 0; --i) {
+		reverse += fullname[i];
+	}
+	cout << reverse;
+
+	system("pause");
+}
