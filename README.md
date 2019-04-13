@@ -1,4 +1,5 @@
 # C++
-Rijeseni zadaci iz kolegija Programiranje
+Riješeni zadaci za kolegij Programiranje
 
-Ovo su svi zadaci koje sam rijesio iz kolegija programiranje koristeci .docx fileove na loomenu za vjezbe.
+# Koji zadaci?
+Ovo su svi zadaci koje sam riješio iz kolegija programiranje koristeći .docx fileove na loomenu za vježbe i nekih zadataka na internetu.
