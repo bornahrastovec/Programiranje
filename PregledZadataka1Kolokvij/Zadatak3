@@ -11,7 +11,7 @@ int main() {
 		druga = a % 10;
 		suma = prva + druga;
 
-		if ((a * a) / suma > 0) {
+		if ((a * a) % suma == 0) {
 			cout << "Broj je djeljiv sa sumom njegovih znamenki";
 		}
 		else {
