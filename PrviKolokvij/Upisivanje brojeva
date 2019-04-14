@@ -1,0 +1,27 @@
+/* Napisite program koji ce od korisnika zahtijevati upisivanje brojeva. Upisivanje se vrsi tako dugo sve dok korisnik ne upise za redom 3 broja koja su veca od broja 10 i manji od broja 200, te zavrsavaju s znamenkom 3
+(na primjer 13, 143 i sl.). Kada korisnik upise za redom takve brojeve, program zavrsava s upisom te ispise ukupnu sumu svih upisanih brojeva prije prekida*/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int broj, brojac = 0, suma = 0;
+
+	do {
+		cout << "Upisi neki broj: ";
+		cin >> broj;
+
+		if (broj > 10 && broj < 200 && broj % 10 == 3) {
+			brojac++;
+			}
+		
+		else {
+			suma += broj;
+		}
+
+
+	} while (brojac != 3);
+
+	cout << "Suma svih brojeva je: " << suma << endl;
+	system("pause");
+}
