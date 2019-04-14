@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a, suma, prva, druga;
+
+	cout << "Unesi prirodni dvoznamenkasti broj.";
+	cin >> a;
+	if (a >= 10 && a < 100) {
+		prva = a / 10;
+		druga = a % 10;
+		suma = prva + druga;
+
+		if ((a * a) / suma > 0) {
+			cout << "Broj je djeljiv sa sumom njegovih znamenki";
+		}
+		else {
+			cout << "Broj nije djeljiv sa sumom njegovih znamenki";
+		}
+	}
+	else {
+		cout << "Nisi unio dvoznamenkasti broj." << endl;
+	}
+	system("pause");
+}
