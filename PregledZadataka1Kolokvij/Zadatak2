@@ -1,0 +1,29 @@
+#include <iostream>	
+using namespace std;
+
+int main() {
+	int broj, jedan=0, dva=0, tri=0;
+
+	do {
+		cout << "Upisi broj: ";
+		cin >> broj;
+
+		if (broj / 100 > 0) {
+			tri++;
+		}
+		else if (broj / 10 > 0) {
+			dva++;
+		}
+		else if (broj > 0 && broj < 10) {
+			jedan++;
+		}
+
+		
+	} while (broj != 0);
+	cout << "Jednoznamenkasti: " << jedan << endl;
+	cout << "Dvoznamenkasti: " << dva << endl;
+	cout << "Troznamenkasti: " << tri << endl;
+
+	system("pause");
+
+}
