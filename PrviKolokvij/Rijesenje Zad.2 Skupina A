@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+	int broj, prvi, drugi, treci, max, min, mid, rez;
+
+	cout << "Upisi troznamenkasti broj: ";
+	cin >> broj;
+
+	if (broj >= 100 && broj < 1000) {
+		prvi = broj / 100;
+		drugi = (broj / 10) % 10;
+		treci = broj % 10;
+
+		cout << "Znamenke su: " << prvi << ", " << drugi << ", " << treci << endl;
+
+		max = prvi;
+		if (drugi > prvi && drugi > treci) max = drugi;
+		if (treci > prvi && treci > drugi) max = treci;
+
+		min = prvi;
+		if (drugi < prvi && drugi < treci) min = drugi;
+		if (treci < prvi && treci < drugi) min = treci;
+
+		mid = prvi + drugi + treci - max - min;
+		rez = max * 100 + mid * 10 + min;
+		cout << "Poredane po velicini: " << rez << endl;
+	}
+	else {
+		cout << "Krivi unos." << endl;
+	}
+
+}
