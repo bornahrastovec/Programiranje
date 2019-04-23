@@ -39,3 +39,36 @@ int main() {
 	system("pause");
 }
 #######################################################################################################################################
+
+// S PROVJEROM 
+
+#######################################################################################################################################
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	string broj, parno, provjera, neparno;
+	
+	do {
+		cout << "Unesi broj: ";
+		cin >> broj;
+		for (int i = 0; i < broj.length(); i++) {
+			if (broj[i] == '0' || broj[i] == '1' || broj[i] == '2' || broj[i] == '3' || broj[i] == '4' || broj[i] == '5' || broj[i] == '6' || broj[i] == '7' || broj[i] == '8' || broj[i] == '9') {
+				if (broj[i] == '2' || broj[i] == '4' || broj[i] == '6' || broj[i] == '8') {
+					parno = parno + broj[i];
+				}
+				else if (broj[i] == '1' || broj[i] == '3' || broj[i] == '5' || broj[i] == '7' || broj[i] == '9') {
+					neparno = neparno + broj[i];
+				}
+			}
+			else {
+				cout << "To nije broj." << endl;
+			}
+		}
+		cout << "Parni brojevi: " << parno << endl;
+		cout << "Neparni brojevi: " << neparno << endl;
+	} while (broj != "izlaz");
+	system("pause");
+}
+#######################################################################################################################################
