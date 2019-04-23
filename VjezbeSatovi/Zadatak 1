@@ -1,0 +1,37 @@
+/* Napisati program koji učita jedan prirodni broj n, a zatim odredi broj koji bi nastao izbacivanjem parnih znamenki iz tog broja.
+Na primjer, upisani broj 123420 rezultat: 13.
+
+Dodajte u ispisivanje parnih znamenaka.
+
+Potrebno je provjeriti da li je unesen broj, i tek kad je unesen broj ispisuju se neparne znamenke. Program se vrti tako dugo
+dok se ne upiše izlaz. /*
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	int broj, parno = 0, provjera=0, neparno =0;
+	
+
+	cout << "Unesi neki prirodni broj: ";
+	cin >> broj;
+	if (broj > 0) {
+		do {
+			provjera = broj % 10;
+			if (provjera % 2 == 0) {
+				parno = parno * 10 + provjera;
+			}
+			else if (provjera % 2 != 0) {
+				neparno = neparno * 10 + provjera;
+			}
+			broj /= 10;
+		} while (broj != 0);
+		cout << "Parni brojevi: " << parno << endl;
+		cout << "Neparni brojevi: " << neparno << endl;
+	}
+	else {
+		cout << "Krivi unos." << endl;
+	}
+	system("pause");
+}
