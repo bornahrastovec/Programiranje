@@ -6,6 +6,9 @@ Dodajte u ispisivanje parnih znamenaka.
 Potrebno je provjeriti da li je unesen broj, i tek kad je unesen broj ispisuju se neparne znamenke. Program se vrti tako dugo
 dok se ne upiše izlaz. /*
 
+
+// VERZIJA BEZ PROVJERE ZA IZLAZ
+#######################################################################################################################################
 #include <iostream>
 #include <string>
 using namespace std;
@@ -35,3 +38,4 @@ int main() {
 	}
 	system("pause");
 }
+#######################################################################################################################################
