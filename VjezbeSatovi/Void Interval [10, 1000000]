@@ -1,0 +1,28 @@
+// Bez razdvajanja jednoznamenkastih... 
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void interval() {
+	int zbroj, produkt, zn, broj;
+	for (int i = 10; i < 1000000; i++) {
+		broj = i; 
+		zbroj = 0;
+		produkt = 1;
+		while (broj) {
+			zn = broj % 10;
+			broj /= 10;
+			zbroj += zn;
+			produkt *= zn;
+		}
+		if (zbroj == produkt) {
+			cout << i << ", ";
+		}
+	}
+}
+
+int main() {
+	interval();
+	system("pause");
+}
