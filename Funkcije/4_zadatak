@@ -1,0 +1,29 @@
+/* Napišite funkciju SUMA koja izračuna sumu znamenaka zadanog cijelog broja. Funkcija ima jedan argument, 
+broj čije znamenke je potrebno zbrojiti. Funkcija vraća cjelobrojni rezultat. */
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int suma(int broj) {
+	int	sum = 0;
+	int pom = 0;
+	do {
+		pom = broj % 10;
+		sum += pom;
+		broj /= 10;
+
+	} while (x!=0);
+
+	cout << "Suma je: " << sum;
+	return 0;
+}
+
+int main() {
+	int broj;
+
+	cout << "Unesi broj i izracunati cu sumu njegovih znamenaka: ";
+	cin >> broj;
+
+	suma(x);
+}
