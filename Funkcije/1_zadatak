@@ -1,0 +1,23 @@
+/*1.    Zadatak Napišite funkciju PARNI koja ce ispisati sve parne brojeve od zadanog broja do broja 30. 
+Funkcija ima jedan argument, pocetak ispisa. Funkcija ne vraca nikakav rezultat.
+Zadani broj: 25 Rezultat ispisa: 26, 28, 30*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void parni(int x) {
+	for (int i = x; i <= 30; i++) {
+		if (i % 2 == 0) {
+			cout << i << endl;
+		}
+	}
+}
+
+int main() {
+	int x;
+	cout << "Unesi broj: ";
+	cin >> x;
+
+	parni(x);
+}
