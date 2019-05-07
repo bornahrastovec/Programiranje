@@ -1,0 +1,27 @@
+/*Napišite funkciju SAMOGLASNICI koja će odrediti koliko samoglasnika ima zadana riječ.Funkcija ima jedan argument, zadanu riječ.
+Funkcija kao rezultat vraća cjelobrojnu vrijednost.
+Zadana riječ: DANAS
+Rezultat funkcije: 2 */
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int samoglasnici(string x) {
+	int brojac = 0;
+	for (int i = 1; i < x.length() - 1; i++) {
+		if (x[i] == 'a' || x[i] == 'A' || x[i] == 'e' || x[i] == 'E' || x[i] == 'i' || x[i] == 'I' || x[i] == 'o' || x[i] == 'O' || x[i] == 'u' || x[i] == 'U') {
+			brojac++;
+		}
+	}
+	cout << "Broj samoglasnika: " << brojac;
+  return 0;
+}
+
+int main() {
+	string x;
+	cout << "Upisi neku rijec: ";
+	cin >> x;
+
+	samoglasnici(x);
+}
