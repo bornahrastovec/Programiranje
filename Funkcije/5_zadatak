@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+double valuta(string tecaj, double iznos) {
+	if (tecaj == "USD") {
+		iznos *= 6.62;
+	}
+	else if (tecaj == "EUR") {
+		iznos *= 7.41;
+	}
+	else if (tecaj == "GBP") {
+		iznos *= 8.62;
+	}
+	else if (tecaj == "JPY") {
+		iznos *= 0.06;
+	}
+	else if (tecaj == "CHF") {
+		iznos *= 6.49;
+	}
+	return iznos;
+}
+
+int main() {
+	string tecaj; 
+	double iznos;
+	double konverzija;
+
+	cout << "Unesi iznos: ";
+	cin >> iznos;
+
+	cout << "Valuta? (USD, EUR, GBP, JPY, CHF) -> ";
+	cin >> tecaj;
+
+	konverzija = valuta(tecaj, iznos);
+	cout << "U kunama: " << konverzija;
+
+}
