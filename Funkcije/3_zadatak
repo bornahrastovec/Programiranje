@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int zamjena(string rijec, char trazenoSlovo, char zamjenskoSlovo) {
+	int brojac = 0;
+	for (int i = 0; i < rijec.length(); i++) {
+		if (rijec[i] == trazenoSlovo) {
+			rijec[i] = zamjenskoSlovo;
+			brojac++;
+		}
+	}
+	cout << "Zamijenjena rijec: " << rijec << endl;
+	return brojac;
+}
+
+int main() {
+	string rijec;
+	int brojSlova;
+	char trazenoSlovo;
+	char zamjenskoSlovo;
+
+	cout << "Unesi rijec: ";
+	cin >> rijec;
+	cout << "Unesi slovo u rijeci koje trazis: ";
+	cin >> trazenoSlovo;
+	cout << "Unesi zamjensko slovo: ";
+	cin >> zamjenskoSlovo;
+
+	brojSlova = zamjena(rijec, trazenoSlovo, zamjenskoSlovo);
+	cout << "Broj zamijenjenih slova: " << brojSlova;
+}
