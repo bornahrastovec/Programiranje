@@ -1,0 +1,23 @@
+// Napiši funkciju koja vraća faktorijel određenog broja. Prototip funkcije:
+
+#include <iostream>
+using namespace std;
+
+
+double faktorijel(int n) {
+	double pom = 1;
+	for (double i = 1; i <= n; i++) {
+		pom *= i;
+	}
+	return pom;
+}
+
+
+int main() {
+	int n;
+	
+	cout << "Unesi broj i izracunat cu njegov faktorijel: ";
+	cin >> n;
+
+	cout << "Faktorijel je: " << faktorijel(n);
+}
