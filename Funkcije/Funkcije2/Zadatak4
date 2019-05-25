@@ -1,0 +1,39 @@
+// Napiši funkciju koja će za zadani interval brojeva vratiti koliko ih je djeljivo sa N
+
+
+#include <iostream>
+using namespace std;
+
+int djeljivo(int a, int b, int n) {
+	int br = 0;
+	if (a > b) {
+		for (int i = b; i < a; i++) {
+			if (i % n == 0) {
+				cout << i << endl;
+				br++;
+			}
+		}
+	}
+	if (b > a) {
+		for (int i = a; i < b; i++) {
+			if (i % n == 0) {
+				cout << i << endl;
+				br++;
+			}
+		}
+	}
+	return br;
+}
+
+int main() {
+	int a, b, n;
+
+	cout << "Unesi broj a: ";
+	cin >> a;
+	cout << "Unesi broj b: ";
+	cin >> b;
+	cout << "Unesi broj n: ";
+	cin >> n;
+
+	cout << "U intervalu [" << a << ", " << b << "]" << " sa brojem " << n << " djeljivo ih je: " << djeljivo(a, b, n);
+}
