@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+char slovo(char c) {
+	char letter=c;
+
+	if (c > 64 && c < 91) {
+		letter = tolower(letter);
+	}
+	else if (c > 96 && c < 123) {
+		letter = toupper(letter);
+	}
+	else {
+		return 0;
+	}
+	return letter;
+}
+
+int main() {
+	char c; 
+
+	cout << "Unesi neko slovo: ";
+	cin >> c;
+
+	cout << "Promijenjeno slovo: " << slovo(c);
+}
